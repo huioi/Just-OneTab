@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Just-OneTab",
+  "version": "1.0",
+  "description": "Just in one tab：标签页收纳与整理。",
+  "permissions": [
+    "storage",
+    "tabs",
+    "activeTab",
+    "contextMenus"
+  ],
+  "action": {
+    "default_icon": {
+      "16": "images/icon.png",
+      "48": "images/icon.png",
+      "128": "images/icon.png"
+    },
+    "default_title": "Just-OneTab"
+  },
+  "background": {
+    "service_worker": "background/background.js"
+  },
+  "icons": {
+    "16": "images/icon.png",
+    "48": "images/icon.png",
+    "128": "images/icon.png"
+  },
+  "web_accessible_resources": [{
+    "resources": ["pages/*"],
+    "matches": ["<all_urls>"]
+  }]
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Just-OneTab 标签页收纳与整理</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo-container">
+                <img src="../images/icon.png" alt="Logo" class="logo">
+                <span id="tab-count"></span>
+            </div>
+            <div class="header-right">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="搜索标签页...">
+                </div>
+                <div class="buttons">
+                    <button id="open-all">全部打开</button>
+                    <button id="delete-all">全部删除</button>
+                    <button id="export-all">全部分享</button>
+                </div>
+            </div>
+        </div>    
+        <div id="groups-container"></div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
