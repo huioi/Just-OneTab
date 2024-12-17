@@ -3,7 +3,11 @@ chrome.action.onClicked.addListener(async () => {
     const tabs = await chrome.tabs.query({ currentWindow: true });
 
     // 过滤掉插件页面和系统页面
-    const validTabs = getValidTabs(tabs);
+    const validTabs = getValidTabs(tabs).filter(tab => {
+        // 避免关闭插件管理页面
+        const managePageUrl = chrome.runtime.getURL("pages/index.html");
+        return tab.url !== managePageUrl;
+    });
 
     if (validTabs.length > 0) {
         // 收纳有效标签并保存到存储
@@ -11,6 +15,7 @@ chrome.action.onClicked.addListener(async () => {
         const allGroups = await saveNewGroup(newGroup);
 
         await closeTabs(validTabs); // 收纳完成后关闭已收纳标签
+        await new Promise(resolve => setTimeout(resolve, 100)); // 加入短暂延迟，确保标签关闭完成后再执行后续逻辑
         await notifyManagePage(allGroups); // 通知管理页面更新
         await ensurePinnedManagePage(); // 确保管理界面打开
     } else {

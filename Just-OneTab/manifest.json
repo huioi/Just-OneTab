@@ -27,6 +27,6 @@
   },
   "web_accessible_resources": [{
     "resources": ["pages/*"],
-    "matches": ["<all_urls>"]
+    "matches": []
   }]
 }

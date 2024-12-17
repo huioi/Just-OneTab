@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     let groupsCache = [];
     let syncTimeout;
+    let isSyncing = false;
 
     // ====== 辅助工具函数 ======
     const debounce = (fn, delay = 300) => {
@@ -42,10 +43,20 @@ document.addEventListener("DOMContentLoaded", () => {
     // ====== 防抖同步函数 ======
     async function syncGroupsDebounced(updatedGroups) {
         clearTimeout(syncTimeout);
+    
         syncTimeout = setTimeout(async () => {
-            groupsCache = updatedGroups;
-            await chrome.storage.local.set({ savedTabsGroups: updatedGroups });
-            renderGroups();
+            if (isSyncing) return; // 如果正在同步则跳过
+            isSyncing = true; // 加锁
+    
+            try {
+                groupsCache = updatedGroups;
+                await chrome.storage.local.set({ savedTabsGroups: updatedGroups });
+                renderGroups(); // 成功时刷新页面
+            } catch (error) {
+                console.error("同步失败：", error);
+            } finally {
+                isSyncing = false; // 释放锁
+            }
         }, 300);
     }
 
