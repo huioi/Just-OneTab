@@ -1,7 +1,7 @@
 # Just-OneTab 标签页收纳与整理
-一款专为浏览器标签页收纳与整理打造的插件，有效节省内存并缓解标签页杂乱问题，兼容 Chrome、Edge 等基于 Chromium 内核的浏览器。A browser extension designed for tab management and organization, effectively saving memory and reducing cluttered tabs. Compatible with Chrome, Edge, and other Chromium-based browsers.
+一款专为浏览器标签页收纳与整理打造的插件，可有效节省内存并缓解标签页杂乱问题，兼容 Chrome、Edge 等基于 Chromium 内核的浏览器。
 ## 功能简介
-- **固定管理**：管理界面缩小并固定至最左侧。
+- **固定管理**：管理界面缩小并固定至浏览器窗口最左侧。
 - **一键收纳所有标签页**：点击插件图标或右键菜单，将当前窗口的所有标签页保存。
 - **单个标签页收纳**：点击右键菜单，单独收纳某个标签页。
 - **分组管理**：收纳的标签页将以收纳时间为类别进行分组，可以单个分组一键“打开、删除或分享”，也可以所有分组一键“全部打开、删除或分享”。
