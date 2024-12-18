@@ -22,9 +22,9 @@ Just-OneTab 是一款为浏览器标签页收纳与整理设计的插件，可�
 进入插件管理页面，点击`加载已解压的扩展程序`，选择 Just-OneTab 文件夹（安装后文件夹不可删除）。
 ### 完整安装（强烈推荐）
 1. 下载项目 Release 中`Just-OneTab.crx`文件。
-2. 进入浏览器扩展程序管理（地址栏输入`chrome://extensions`），启用开发者模式，将`Just-OneTab.crx`文件拖入浏览器窗口进行安装，接着复制 Chrome 给 Just-OneTab 分配的扩展程序 ID。
-3. 下载项目中`chrome.adm`文件（或于 [The Chromium Projects](https://www.chromium.org/administrators/policy-templates) 自行下载“policy_templates.zip”并解压打开目录`windows→adm→zh-CN→chrome.adm`）。
-4. `Win + R`进入运行，输入`gpedit.msc`进入本地组策略编辑器，右键接连点击“计算机配置→管理模版”，点击“添加/删除模板”，选择添加`chrome.adm`后确定。
+2. 进入浏览器扩展程序管理（地址栏输入`chrome://extensions`），启用开发者模式，将 Just-OneTab.crx 文件拖入浏览器窗口进行安装，接着复制 Chrome 给 Just-OneTab 分配的扩展程序 ID。
+3. 下载项目中`chrome.adm`文件（或于 [The Chromium Projects](https://www.chromium.org/administrators/policy-templates) 自行下载“policy_templates.zip”并解压打开目录“windows→adm→zh-CN→chrome.adm”）。
+4. `Win + R`进入运行，输入`gpedit.msc`进入本地组策略编辑器，右键接连点击“计算机配置→管理模版”，点击“添加/删除模板”，选择添加 chrome.adm 后确定。
 5. 接着返回本地策略组编辑器，点击“计算机配置→管理模版→经典管理模板→Google→Google Chrome→扩展程序”，双击或右键编辑设置“配置扩展程序安装许可名单”，点击“选项（显示）”，粘贴第 2 步复制的插件 ID 后确定。
 
 <img src="https://github.com/user-attachments/assets/96e40d8d-8539-42ce-b79e-3dafb3b06d22" width="287px">
