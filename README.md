@@ -27,8 +27,8 @@ Just-OneTab 是一款为浏览器标签页收纳与整理设计的插件，功�
 4. `Win + R`进入运行，输入`gpedit.msc`进入本地组策略编辑器，右键点击`计算机配置/管理模版`，点击`添加删除模板`，选择添加`chrome.adm`后确定。
 5. 接着返回本地策略组编辑器，点击`计算机配置/管理模版/经典管理模板/Google/Google Chrome/扩展程序`，双击或右键编辑设置`配置扩展程序安装许可名单`，点击`选项：显示`，粘贴第 2 步复制的插件 ID 后确定。
 
-<img src="https://github.com/user-attachments/assets/96e40d8d-8539-42ce-b79e-3dafb3b06d22" width="287px">
-<img src="https://github.com/user-attachments/assets/7512efae-4bf4-491e-b23d-eed69ee34131" width="573px">
+<img src="https://github.com/user-attachments/assets/96e40d8d-8539-42ce-b79e-3dafb3b06d22" width="267px">
+<img src="https://github.com/user-attachments/assets/7512efae-4bf4-491e-b23d-eed69ee34131" width="553px">
 
 ## 使用说明
 ### 快速开始
