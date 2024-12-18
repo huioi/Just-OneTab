@@ -15,17 +15,17 @@
 ![image](https://github.com/user-attachments/assets/e313e69c-d6ac-415e-b12e-2c8216d2aef6)
 ![image](https://github.com/user-attachments/assets/d1b7d920-b384-428d-a49d-61d86faacc30)
 ## 安装步骤
-由于 Google Chrome 禁用非`Chrome 应用商店`插件，**快速安装**后重启 Chrome 会将插件自动清除卸载。因此，请选择**完整安装**的方式将 Just-OneTab 添至白名单后方可长期正常使用。
+由于 Google Chrome 禁用非 Chrome 应用商店插件，**快速安装**后重启 Chrome 会将插件自动清除卸载。因此，请选择**完整安装**的方式将 Just-OneTab 添至白名单后方可长期正常使用。
 
-注：下列安装步骤仅应用于 Chrome，Edge 及其他浏览器请自行测试（经个人测试，Edge 选择**快速安装**即可，无需**完整安装**）。
+注：下列安装步骤仅应用于 Chrome，Edge 及其他浏览器请自行测试（经个人测试，Edge 选择**快速安装**即可）。
 ### 快速安装（不推荐，仅适用于开发与测试环境）
 进入插件管理页面，点击`加载已解压的扩展程序`，选择 Just-OneTab 文件夹（安装后文件夹不可删除）。
 ### 完整安装（强烈推荐）
 1. 下载项目 Release 中`Just-OneTab.crx`文件。
-2. 进入浏览器扩展程序管理（地址栏输入`chrome://extensions`），启用`开发者模式`，将`·Just-OneTab.crx`文件拖入浏览器窗口进行安装，接着复制 Just-OneTab 的 ID。
+2. 进入浏览器扩展程序管理（地址栏输入`chrome://extensions`），启用开发者模式，将`·Just-OneTab.crx`文件拖入浏览器窗口进行安装，接着复制 Just-OneTab 的 ID。
 3. 下载项目中`chrome.adm`文件（或于[The Chromium Projects](https://www.chromium.org/administrators/policy-templates/)自行下载并解压打开目录`policy_templates.zip/windows/adm/zh-CN/chrome.adm`）。
-4. `Win + R`进入`运行`，输入`gpedit.msc`进入`本地组策略编辑器`，右键点击`计算机配置/管理模版`，点击`添加删除模板`，选择添加`chrome.adm`后确定。
-5. 接着返回`本地策略组编辑器`，点击`计算机配置/管理模版/经典管理模板/Google/Google Chrome/扩展程序`，双击或右键编辑设置`配置扩展程序安装许可名单`，点击`选项：显示`，粘贴第 2 步复制的插件 ID 后确定。
+4. `Win + R`进入运行，输入`gpedit.msc`进入本地组策略编辑器，右键点击`计算机配置/管理模版`，点击`添加删除模板`，选择添加`chrome.adm`后确定。
+5. 接着返回本地策略组编辑器，点击`计算机配置/管理模版/经典管理模板/Google/Google Chrome/扩展程序`，双击或右键编辑设置`配置扩展程序安装许可名单`，点击`选项：显示`，粘贴第 2 步复制的插件 ID 后确定。
 ## 使用说明
 ### 快速开始
 1. 安装插件后，右键点击浏览器右上角的插件图标。
