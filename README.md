@@ -1,5 +1,4 @@
 <div align="center">
-    <br />
     <img src="./Just-OneTab/images/icon.png" alt="Just-OneTab Icon" width="20%" height="20%" />
     <h1>Just-OneTab</h1>
     <p>一款为浏览器<b>标签页收纳与整理</b>设计的插件，可有效<b>节省内存</b>并<b>缓解标签页杂乱</b>问题</p>
