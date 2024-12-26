@@ -7,7 +7,7 @@
     <br />
 </div>
 
-## 功能简介
+## 💡功能简介
 - **固定管理界面**：将管理界面缩小并固定在浏览器窗口的最左侧，方便随时访问。
 - **收纳所有标签页**：通过点击插件图标或右键菜单，将当前窗口中的所有标签页一键保存。
 - **收纳单个标签页**：通过右键菜单，支持单独收纳某个标签页，灵活管理。
@@ -18,16 +18,15 @@
     - 仅收纳此标签页
     - 收纳全部标签页
     - 整理 Just-OneTab （进入管理界面）
-## 截图预览
+## 🖼️截图预览
 ![image](https://github.com/user-attachments/assets/e313e69c-d6ac-415e-b12e-2c8216d2aef6)
 ![image](https://github.com/user-attachments/assets/d1b7d920-b384-428d-a49d-61d86faacc30)
-## 安装步骤
+## 📦安装步骤
+### 🟢🔴🟡🔵Google Chrome 浏览器
 由于 Google Chrome 禁用非 Chrome 应用商店插件，**快速安装**后重启 Chrome 会将插件自动清除卸载。因此，请选择**完整安装**的方式将 Just-OneTab 添至白名单后方可长期正常使用。
-
-另外，下列安装步骤仅应用于 Chrome，Edge 及其他浏览器请自行测试。
-### 快速安装（不推荐，仅适用于开发与测试环境）
+#### 快速安装（不推荐，仅适用于开发与测试环境）
 进入插件管理页面，点击加载已解压的扩展程序，选择 Just-OneTab 文件夹（安装后文件夹不可删除）。
-### 完整安装（强烈推荐）
+#### 完整安装（强烈推荐）
 1. 下载项目 Release 中`Just-OneTab.crx`文件。
 2. 进入浏览器扩展程序管理（地址栏输入`chrome://extensions`），启用开发者模式，将 Just-OneTab.crx 文件拖入浏览器窗口进行安装，接着复制 Chrome 给 Just-OneTab 分配的扩展程序 ID。
 3. 下载项目中`chrome.adm`文件（或于 [The Chromium Projects](https://www.chromium.org/administrators/policy-templates) 自行下载“policy_templates.zip”并解压打开目录“windows→adm→zh-CN→chrome.adm”）。
@@ -37,7 +36,9 @@
 <img src="https://github.com/user-attachments/assets/96e40d8d-8539-42ce-b79e-3dafb3b06d22" width="287px">
 <img src="https://github.com/user-attachments/assets/7512efae-4bf4-491e-b23d-eed69ee34131" width="513px">
 
-## 使用说明
+### 🌀Microsoft Edge 浏览器
+点击 https://microsoftedge.microsoft.com/addons/detail/gjnhfggmogappochmnaiphnnmjfhofic 一键安装，或进入 Edge 扩展中心进行搜索。
+## ▶️使用说明
 ### 快速开始
 1. 安装插件后，右键点击浏览器右上角的插件图标。
 2. 在弹出的菜单中，点击`整理 Just-OneTab`以激活插件。
@@ -54,7 +55,7 @@
     - `全部删除`：清空所有分组。
     - `全部分享`：所有分组以 Markdown 进行分享。
     - `搜索框🔍`：查找、筛选标签页。
-## 其他
+## 💭其他
 ### 项目起源
 在长期使用 [OneTab](https://www.one-tab.com) 的过程中，遇到一些令我困扰的问题，其中最显著的是右键菜单中冗长的选项列表。实际使用中，我仅需“仅发送此标签页到 OneTab”这一功能，但每次都需要在众多选项中寻找，虽然单次耗时不长，却在长期使用中积累了大量时间成本，大大降低了使用效率。
 
