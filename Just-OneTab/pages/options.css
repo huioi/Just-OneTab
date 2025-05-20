@@ -1,0 +1,340 @@
+/* pages/options.css */
+
+:root {
+    --options-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    
+    /* Light Mode Variables */
+    --options-bg-color-light: #f0f2f5;
+    --options-wrapper-bg-light: #ffffff; 
+    --options-content-bg-light: #ffffff; 
+    --options-text-color-light: #333e48;
+    --options-heading-color-light: #1c2f45;
+    --options-section-heading-color-light: #084c7c;
+    --options-label-color-light: #4a5568;
+    --options-border-color-light: #e2e8f0;
+    --options-dashed-border-color-light: #e9edf1;
+    --options-button-bg-light: #2563eb;
+    --options-button-hover-bg-light: #1d4ed8;
+    --options-button-text-color-light: white;
+    --options-button-cancel-bg-light: #e2e8f0;
+    --options-button-cancel-text-light: #4a5568;
+    --options-button-cancel-hover-bg-light: #cbd5e0;
+    --options-button-restore-bg-light: transparent;
+    --options-button-restore-text-light: #5a677b;
+    --options-button-restore-border-light: #cbd5e0;
+    --options-button-restore-hover-bg-light: #e2e8f0;
+    --options-accent-color-light: #2563eb;
+    --options-shadow-color-light: rgba(100, 116, 139, 0.08);
+    --options-success-text-light: #2f855a;
+    --options-error-text-light: #c53030;
+    --options-description-text-light: #718096;
+    --options-sticky-bg-light: rgba(255, 255, 255, 0.97); 
+
+    /* Dark Mode Variables */
+    --options-bg-color-dark: #1a1d24;
+    --options-wrapper-bg-dark: #232730; 
+    --options-content-bg-dark: #232730; 
+    --options-text-color-dark: #e2e8f0;
+    --options-heading-color-dark: #a0aec0;
+    --options-section-heading-color-dark: #7f9cf5;
+    --options-label-color-dark: #b0bdc9;
+    --options-border-color-dark: #3a4151;
+    --options-dashed-border-color-dark: #3a4151;
+    --options-button-bg-dark: #4299e1;
+    --options-button-hover-bg-dark: #3182ce;
+    --options-button-text-color-dark: white;
+    --options-button-cancel-bg-dark: #4a5568;
+    --options-button-cancel-text-dark: #e2e8f0;
+    --options-button-cancel-hover-bg-dark: #718096;
+    --options-button-restore-bg-dark: transparent;
+    --options-button-restore-text-dark: #a0aec0;
+    --options-button-restore-border-dark: #4a5568;
+    --options-button-restore-hover-bg-dark: #2d3748;
+    --options-accent-color-dark: #7f9cf5;
+    --options-shadow-color-dark: rgba(0, 0, 0, 0.25);
+    --options-success-text-dark: #68d391;
+    --options-error-text-dark: #fc8181;
+    --options-description-text-dark: #8a98aa;
+    --options-sticky-bg-dark: rgba(35, 39, 48, 0.97); 
+}
+
+body {
+    font-family: var(--options-font-family);
+    margin: 0;
+    background-color: var(--options-bg-color-light);
+    color: var(--options-text-color-light);
+    display: flex; 
+    justify-content: center; 
+    min-height: 100vh;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 12.5px; 
+}
+
+body.dark-mode {
+    background-color: var(--options-bg-color-dark);
+    color: var(--options-text-color-dark);
+}
+
+.options-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 520px;
+    height: 100vh; 
+    box-shadow: 0 3px 12px var(--options-shadow-color-light);
+    background: var(--options-wrapper-bg-light); 
+    border-radius: 0; 
+    margin: 0 auto; 
+    overflow: hidden;
+}
+body.dark-mode .options-wrapper {
+    box-shadow: 0 3px 12px var(--options-shadow-color-dark);
+    background: var(--options-wrapper-bg-dark);
+}
+
+.options-header-sticky {
+    padding: 10px 18px 8px;
+    background: var(--options-sticky-bg-light);
+    backdrop-filter: blur(8px); 
+    border-bottom: 1px solid var(--options-border-color-light);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+body.dark-mode .options-header-sticky {
+    background: var(--options-sticky-bg-dark);
+    border-bottom-color: var(--options-border-color-dark);
+}
+
+.options-header-sticky h1 {
+    color: var(--options-heading-color-light);
+    text-align: center;
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+body.dark-mode .options-header-sticky h1 {
+    color: var(--options-heading-color-dark);
+}
+
+.options-content {
+    flex-grow: 1; 
+    overflow-y: auto;
+    padding: 12px 18px;
+    background-color: var(--options-content-bg-light); 
+}
+body.dark-mode .options-content {
+    background-color: var(--options-content-bg-dark);
+}
+
+.settings-section {
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed var(--options-dashed-border-color-light);
+}
+body.dark-mode .settings-section {
+    border-bottom-color: var(--options-dashed-border-color-dark);
+}
+.settings-section:last-of-type {
+    border-bottom: none;
+    margin-bottom: 8px;
+}
+
+.settings-section h2 {
+    font-size: 0.9em;
+    font-weight: 600; 
+    color: var(--options-section-heading-color-light);
+    margin-top: 0;
+    margin-bottom: 6px;
+}
+body.dark-mode .settings-section h2 {
+    color: var(--options-section-heading-color-dark);
+}
+
+.setting-item {
+    margin-bottom: 5px;
+}
+.setting-item p.setting-group-title { 
+    font-size: 0.85em;
+    font-weight: 500;
+    color: var(--options-label-color-light);
+    margin-bottom: 3px;
+    margin-top: 2px;
+}
+body.dark-mode .setting-item p.setting-group-title {
+    color: var(--options-label-color-dark);
+}
+
+.setting-item label {
+    display: flex; 
+    align-items: center;
+    cursor: pointer;
+    font-size: 0.82em;
+    color: var(--options-label-color-light);
+    padding: 3px 0;
+}
+body.dark-mode .setting-item label {
+    color: var(--options-label-color-dark);
+}
+
+.setting-item input[type="radio"],
+.setting-item input[type="checkbox"] {
+    margin-right: 5px; 
+    transform: scale(0.85);
+    accent-color: var(--options-accent-color-light);
+    vertical-align: middle;
+}
+body.dark-mode .setting-item input[type="radio"],
+body.dark-mode .setting-item input[type="checkbox"] {
+    accent-color: var(--options-accent-color-dark);
+}
+
+.setting-description {
+    font-size: 0.75em;
+    color: var(--options-description-text-light);
+    margin-left: 22px;
+    display: block;
+    margin-top: -1px;
+    line-height: 1.4;
+}
+body.dark-mode .setting-description {
+    color: var(--options-description-text-dark);
+}
+
+.options-footer-sticky {
+    padding: 10px 18px;
+    background: var(--options-sticky-bg-light);
+    backdrop-filter: blur(8px);
+    border-top: 1px solid var(--options-border-color-light);
+    position: sticky;
+    bottom: 0;
+    z-index: 10;
+    width: 100%;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+body.dark-mode .options-footer-sticky {
+    background: var(--options-sticky-bg-dark);
+    border-top-color: var(--options-border-color-dark);
+}
+
+.footer-buttons-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-buttons-container .left-buttons,
+.footer-buttons-container .right-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.footer-buttons-container button {
+    padding: 7px 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.82em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Added box-shadow transition */
+}
+.footer-buttons-container button:hover {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+
+button#saveSettings {
+    background-color: var(--options-button-bg-light);
+    color: var(--options-button-text-color-light);
+}
+body.dark-mode button#saveSettings {
+    background-color: var(--options-button-bg-dark);
+    color: var(--options-button-text-color-dark);
+}
+button#saveSettings:hover {
+    background-color: var(--options-button-hover-bg-light);
+}
+body.dark-mode button#saveSettings:hover {
+    background-color: var(--options-button-hover-bg-dark);
+}
+
+button.btn-cancel { 
+    background-color: var(--options-button-cancel-bg-light);
+    color: var(--options-button-cancel-text-light);
+    border: 1px solid var(--options-border-color-light);
+}
+body.dark-mode button.btn-cancel {
+    background-color: var(--options-button-cancel-bg-dark);
+    color: var(--options-button-cancel-text-dark);
+    border-color: var(--options-border-color-dark);
+}
+button.btn-cancel:hover {
+    background-color: var(--options-button-cancel-hover-bg-light);
+}
+body.dark-mode button.btn-cancel:hover {
+    background-color: var(--options-button-cancel-hover-bg-dark);
+}
+
+
+button.btn-restore-default { 
+    background-color: var(--options-button-restore-bg-light);
+    color: var(--options-button-restore-text-light);
+    border: 1px solid var(--options-button-restore-border-light);
+}
+body.dark-mode button.btn-restore-default {
+    background-color: var(--options-button-restore-bg-dark);
+    color: var(--options-button-restore-text-dark);
+    border-color: var(--options-button-restore-border-dark);
+}
+button.btn-restore-default:hover {
+    background-color: var(--options-button-restore-hover-bg-light);
+}
+body.dark-mode button.btn-restore-default:hover {
+    background-color: var(--options-button-restore-hover-bg-dark);
+}
+
+
+.status-message {
+    margin-top: 5px;
+    text-align: center;
+    font-size: 0.78em;
+    min-height: 14px;
+    font-weight: 500;
+}
+.status-message.success { color: var(--options-success-text-light); }
+body.dark-mode .status-message.success { color: var(--options-success-text-dark); }
+.status-message.error { color: var(--options-error-text-light); }
+body.dark-mode .status-message.error { color: var(--options-error-text-dark); }
+.status-message.info { color: var(--options-label-color-light); }
+body.dark-mode .status-message.info { color: var(--options-label-color-dark); }
+
+/* Scrollbar styling for webkit browsers */
+.options-content::-webkit-scrollbar {
+    width: 8px;
+}
+.options-content::-webkit-scrollbar-track {
+    background: var(--options-bg-color-light);
+    border-radius: 10px;
+}
+body.dark-mode .options-content::-webkit-scrollbar-track {
+    background: var(--options-bg-color-dark);
+}
+.options-content::-webkit-scrollbar-thumb {
+    background-color: var(--options-border-color-light);
+    border-radius: 10px;
+    border: 2px solid var(--options-bg-color-light);
+}
+body.dark-mode .options-content::-webkit-scrollbar-thumb {
+    background-color: var(--options-border-color-dark);
+    border: 2px solid var(--options-bg-color-dark);
+}
+.options-content::-webkit-scrollbar-thumb:hover {
+    background-color: #b0b8c2;
+}
+body.dark-mode .options-content::-webkit-scrollbar-thumb:hover {
+    background-color: #5a677b;
+}
