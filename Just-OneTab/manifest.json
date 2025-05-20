@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Just-OneTab",
-  "version": "1.0",
+  "version": "2.0", 
   "description": "Just in one tab：标签页收纳与整理。",
   "permissions": [
     "storage",
@@ -25,8 +25,9 @@
     "48": "images/icon.png",
     "128": "images/icon.png"
   },
+  "options_page": "pages/options.html",
   "web_accessible_resources": [{
-    "resources": ["pages/*"],
+    "resources": ["pages/*", "images/*"], 
     "matches": []
   }]
 }
